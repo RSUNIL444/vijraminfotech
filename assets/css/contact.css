@@ -1,0 +1,114 @@
+/* ==========================
+   Contact Page Styles
+========================== */
+
+.company-profile {
+    max-width: var(--max-width);
+    margin: 40px auto 36px;
+    padding: 0 24px;
+}
+
+.company-profile h2 {
+    text-align: center;
+    font-size: clamp(1.8rem, 2.1vw, 2.2rem);
+    color: var(--color-primary-dark);
+    margin-bottom: 28px;
+    position: relative;
+}
+
+.company-profile h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: var(--color-primary);
+    display: block;
+    margin: 12px auto 0;
+    border-radius: 999px;
+}
+
+.info-group {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 28px;
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: 0 18px 44px var(--color-shadow);
+}
+
+.info-group h3 {
+    margin: 0 0 20px;
+    color: var(--color-primary-dark);
+    font-size: 1.25rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-border);
+    gap: 18px;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.label {
+    font-weight: 700;
+    color: var(--color-text);
+    min-width: 180px;
+}
+
+.value {
+    flex: 1;
+    color: var(--color-muted);
+    text-align: right;
+    line-height: 1.7;
+}
+
+.value a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.value a:hover,
+.value a:focus {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .company-profile {
+        padding: 0 20px;
+    }
+
+    .info-group {
+        padding: 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .label {
+        min-width: auto;
+    }
+
+    .value {
+        text-align: left;
+    }
+
+    .company-profile h2 {
+        font-size: 1.7rem;
+    }
+
+    .info-group h3 {
+        font-size: 1.1rem;
+    }
+}

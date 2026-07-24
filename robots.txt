@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tumaki.in/sitemap.xml

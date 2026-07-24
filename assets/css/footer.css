@@ -1,0 +1,58 @@
+/* Footer Styling */
+.site-footer {
+    background: linear-gradient(180deg, rgba(247, 249, 252, 0.95), rgba(247, 249, 252, 1));
+    color: var(--color-text);
+    padding: 40px 24px;
+    margin-top: auto;
+    border-top: 1px solid var(--color-border);
+}
+
+.footer-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.footer-copyrights {
+    flex: 1 1 360px;
+    min-width: 260px;
+    text-align: center;
+}
+
+.footer-copyrights h4,
+.footer-copyrights h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-muted);
+}
+
+.footer-copyrights a:hover,
+.footer-copyrights a:focus {
+    color: var(--color-primary);
+}
+
+/* Tablet Responsive (768px and below) */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 32px 18px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 18px;
+        text-align: center;
+    }
+}
+
+/* Mobile Responsive (576px and below) */
+@media (max-width: 576px) {
+    .site-footer {
+        padding: 24px 14px;
+    }
+}
+

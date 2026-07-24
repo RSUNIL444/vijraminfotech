@@ -1,0 +1,242 @@
+/* App Showcase */
+
+.app-showcase {
+    max-width: 1120px;
+    margin: 72px auto;
+    padding: 48px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(340px, 0.9fr);
+    gap: 40px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 28px;
+    box-shadow: 0 22px 55px var(--color-shadow);
+}
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.app-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 18px;
+    background: var(--color-primary-soft);
+    color: var(--color-primary-dark);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    margin-bottom: 8px;
+}
+
+.app-content h2 {
+    margin-bottom: 8px;
+    font-size: clamp(2.25rem, 2.2vw, 2.8rem);
+    line-height: 1.04;
+    color: var(--color-text);
+}
+
+.app-content h3 {
+    margin-bottom: 24px;
+    font-size: 1.45rem;
+    color: var(--color-primary-dark);
+    font-weight: 600;
+}
+
+.app-content p {
+    margin-bottom: 32px;
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--color-muted);
+    max-width: 680px;
+}
+
+/* Buttons */
+
+.app-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 14px 28px;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+.btn-primary {
+    min-width: 160px;
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background: var(--color-primary-dark);
+}
+
+.btn-secondary {
+    min-width: 160px;
+    background: transparent;
+    color: var(--color-primary-dark);
+    border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background: var(--color-primary-soft);
+}
+
+/* Right Side */
+
+.app-image {
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    background: linear-gradient(180deg, #fbfdff 0%, #f4f8ff 100%);
+    border-radius: 24px;
+    border: 1px solid var(--color-border);
+}
+
+.app-image img {
+    width: 100%;
+    max-width: 340px;
+    display: block;
+    border-radius: 22px;
+    object-fit: contain;
+}
+
+.Registration,
+.container {
+    max-width: 1120px;
+    margin: 0 auto 40px;
+    padding: 0 24px;
+}
+
+.Registration h1,
+.container h1 {
+    font-size: clamp(2rem, 2.1vw, 2.4rem);
+    margin-bottom: 18px;
+    color: var(--color-text);
+}
+
+.service {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 18px 40px rgba(16, 42, 67, 0.04);
+}
+
+.service h2 {
+    margin-bottom: 20px;
+    font-size: 1.35rem;
+    color: var(--color-primary-dark);
+    line-height: 1.4;
+}
+
+.items {
+    margin-bottom: 24px;
+}
+
+.registration-steps,
+.job-categories {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    gap: 12px;
+}
+
+.registration-steps li,
+.job-categories li {
+    position: relative;
+    padding: 16px 18px;
+    background: #f6f9ff;
+    color: var(--color-text);
+    border-radius: 16px;
+    line-height: 1.6;
+}
+
+.registration-steps li::before,
+.job-categories li::before {
+    content: '•';
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+.registration-steps li {
+    padding-left: 32px;
+}
+
+.job-categories li {
+    padding-left: 32px;
+}
+
+.service p {
+    margin-bottom: 0;
+    color: var(--color-muted);
+    line-height: 1.8;
+}
+
+.container .btn-primary {
+    margin-top: 24px;
+}
+
+/* Responsive */
+
+@media (max-width: 980px) {
+    .app-showcase {
+        grid-template-columns: 1fr;
+        padding: 36px 28px;
+    }
+
+    .app-image {
+        padding: 20px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 780px) {
+    .app-showcase {
+        margin: 56px auto;
+        gap: 24px;
+    }
+
+    .service {
+        padding: 28px;
+    }
+}
+
+@media (max-width: 620px) {
+    .Registration,
+    .container {
+        padding: 0 18px;
+    }
+
+    .service {
+        padding: 24px;
+    }
+
+    .app-content h2 {
+        font-size: 2rem;
+    }
+
+    .app-content h3 {
+        font-size: 1.25rem;
+    }
+
+    .registration-steps li,
+    .job-categories li {
+        padding: 14px 16px;
+    }
+}
