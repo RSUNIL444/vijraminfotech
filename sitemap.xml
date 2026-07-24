@@ -1,28 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://tumaki.in/</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://vijraminfotech.in/</loc>
+    <lastmod>2026-07-24</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.tumaki.in/index.html</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://www.vijraminfotech.in/index.html</loc>
+    <lastmod>2026-07-24</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.tumaki.in/index.html#categories</loc>
-    <lastmod>2026-07-14</lastmod>
+    <loc>https://www.vijraminfotech.in/vijramjobs.html</loc>
+    <lastmod>2026-07-24</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.tumaki.in/aboutus.html</loc>
-    <lastmod>2026-07-14</lastmod>
-    <priority>0.8</priority>
+    <loc>https://www.vijraminfotech.in/vijramjobslite.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tumaki.in/contact.html</loc>
-    <lastmod>2026-07-14</lastmod>
-    <priority>0.7</priority>
+    <loc>https://vijraminfotech.in/contact.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <priority>1.0</priority>
+  </url>
+    <url>
+    <loc>https://vijraminfotech.in/aboutus.html</loc>
+    <lastmod>2026-07-24</lastmod>
+    <priority>1.0</priority>
   </url>
   </urlset>
