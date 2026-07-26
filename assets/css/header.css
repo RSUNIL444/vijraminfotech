@@ -285,14 +285,16 @@ nav {
         padding: var(--spacing-md);
         order: 3;
         flex: 1 1 100%;
-        background-color: var(--color-primary-dark);
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: 18px;
+        box-shadow: 0 16px 40px rgba(16, 42, 67, 0.1);
         gap: var(--spacing-sm);
         margin-top: var(--spacing-sm);
         max-height: 500px;
         overflow-y: auto;
         transition: all var(--transition-speed);
     }
-
 
     nav.active {
         display: block;
@@ -303,21 +305,57 @@ nav {
         flex-direction: column;
         width: 100%;
         display: flex;
+        align-items: stretch;
     }
 
     .nav-links li {
-        text-align: center;
+        text-align: left;
+        width: 100%;
     }
 
-    .nav-links a {
-        font-size: 0.85rem;
-        padding: var(--spacing-sm);
-        border-bottom: 1px solid var(--color-light);
+    .nav-links a,
+    .dropdown-toggle {
+        font-size: 0.9rem;
+        padding: 0.8rem 0.95rem;
+        border-radius: 12px;
+        display: block;
+        color: var(--color-text);
+        background: transparent;
+        border: 1px solid transparent;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus,
+    .dropdown-toggle:hover,
+    .dropdown-toggle:focus {
+        background: var(--color-primary-soft);
+        color: var(--color-primary-dark);
+        border-color: var(--color-border);
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: static;
+        width: 100%;
+        margin-top: 0.5rem;
+        padding: 0.4rem 0;
+        border-radius: 12px;
+        background: #f8fbff;
+        border: 1px solid var(--color-border);
+        box-shadow: none;
+    }
+
+    .dropdown.open .dropdown-menu {
         display: block;
     }
 
-    .nav-links a:last-child {
-        border-bottom: none;
+    .dropdown-menu li a {
+        padding: 0.7rem 0.95rem;
+        color: var(--color-text);
     }
 
     .btn-primary {
