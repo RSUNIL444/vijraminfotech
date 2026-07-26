@@ -45,6 +45,8 @@ function initializeHamburgerMenu() {
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
     const navLinks = document.querySelectorAll('.nav-links a');
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const dropdown = document.querySelector('.dropdown');
 
     if (!menuToggle || !nav) return;
 
@@ -65,11 +67,22 @@ function initializeHamburgerMenu() {
         );
     });
 
+    // Toggle dropdown on touch devices and small screens
+    if (dropdownToggle && dropdown) {
+        dropdownToggle.addEventListener('click', (event) => {
+            if (window.innerWidth <= 576) {
+                event.preventDefault();
+                dropdown.classList.toggle('open');
+            }
+        });
+    }
+
     // Close menu when a link is clicked
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             menuToggle.classList.remove('active');
             nav.classList.add('hidden');
+            if (dropdown) dropdown.classList.remove('open');
             menuToggle.setAttribute('aria-expanded', 'false');
         });
     });
@@ -78,11 +91,17 @@ function initializeHamburgerMenu() {
     document.addEventListener('click', (event) => {
         const isMenuButton = event.target.closest('.menu-toggle');
         const isNav = event.target.closest('nav');
+        const isDropdown = event.target.closest('.dropdown');
 
         if (!isMenuButton && !isNav && !nav.classList.contains('hidden')) {
             menuToggle.classList.remove('active');
             nav.classList.add('hidden');
+            if (dropdown) dropdown.classList.remove('open');
             menuToggle.setAttribute('aria-expanded', 'false');
+        }
+
+        if (window.innerWidth <= 576 && dropdown && !isDropdown) {
+            dropdown.classList.remove('open');
         }
     });
 
@@ -91,6 +110,7 @@ function initializeHamburgerMenu() {
         if (event.key === 'Escape' && !nav.classList.contains('hidden')) {
             menuToggle.classList.remove('active');
             nav.classList.add('hidden');
+            if (dropdown) dropdown.classList.remove('open');
             menuToggle.setAttribute('aria-expanded', 'false');
         }
     });
